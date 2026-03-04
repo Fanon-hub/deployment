@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 from .models import Article
 from .forms import ArticleForm
+from django.http import HttpResponse 
 
 
 def index(request):

@@ -78,8 +78,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'python_heroku_task',
-        'USER': 'sample_user',
-        'PASSWORD': 'password',
+        'USER': 'sample_us',
+        'PASSWORD': 'Incorrect@266',
         'HOST': 'localhost',
         'PORT': '5432',
     }
