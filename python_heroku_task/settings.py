@@ -10,28 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os 
-
-from pathlib import Path
-
 import dj_database_url
-
-DATABASES = {
-    'default': dj_database_url.config(
-        default='sqlite:///db.sqlite3',
-        conn_max_age=600,
-        ssl_require=True 
-    )
-}
-
-
-ALLOWED_HOSTS = [
-    'deployment-4-jepe.onrender.com',
-    'deployment-3-skte.onrender.com',
-    'localhost',
-    '127.0.0.1'
-]
-
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -90,6 +70,23 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'python_heroku_task.wsgi.application'
 
+DATABASES = {
+    'default': dj_database_url.config(
+        default='sqlite:///db.sqlite3',
+        conn_max_age=600,
+        ssl_require=True 
+    )
+}
+
+
+ALLOWED_HOSTS = [
+    'deployment-4-jepe.onrender.com',
+    'deployment-3-skte.onrender.com',
+    'localhost',
+    '127.0.0.1'
+]
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
